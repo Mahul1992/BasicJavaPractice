@@ -56,6 +56,22 @@ public class ArrayListPractice {
 				}
 			}
 			
+			//Above example was not type safe, we can type safe using generic .
+			//  Use below example
+			
+			ArrayList<Integer> al2 = new ArrayList<Integer>();
+			//al2.add("ahba"); - here compilation error appear since we are adding string to the integer arraylist
+			
+			al2.add(1);
+			al2.add(1);
+			al2.add(2);
+			al2.add(5);
+			al2.add(4);
+			
+			System.out.println(al2.get(3));
+			for (Integer i : al2) {
+				System.out.println("Type Safe value with integer: "+i);
+			}
 	}
 
 }
