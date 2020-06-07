@@ -2,9 +2,13 @@ package collectionPractice;
 
 import java.util.ArrayList;
 
+
+
 public class ArrayListPractice {
 
-	public static void main(String[] args) {
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) 
+	{
 	// TODO Auto-generated method stub
 			ArrayList ar = new ArrayList();
 			ar.add("Mahul");
@@ -18,6 +22,40 @@ public class ArrayListPractice {
 			{
 				System.out.println(object.toString());
 			}
+			
+			//Work With ObjectData
+			ArrayList ar1 = new ArrayList();
+			ar1.add(new Employee(101, "Temper"));
+			ar1.add(new Students(001, "Prashant"));
+			ar1.add(null);
+			ar1.add("Sumitra");
+			
+			System.out.println("--------------Object Data--------------");
+			System.out.println(ar1.toString());
+			
+			for (Object object : ar1)
+			{
+				if(object instanceof Employee) {
+					Employee e = (Employee) object;
+					System.out.println(e.eid);
+					System.out.println(e.name);
+				}
+				
+				if(object instanceof Students) {
+					Students s = (Students) object;
+					System.out.println(s.sid);
+					System.out.println(s.sName);
+				}
+				if(object instanceof String)
+				{
+					System.out.println(object);
+				}
+				if(object ==null)
+				{
+					System.out.println(object);
+				}
+			}
+			
 	}
 
 }
