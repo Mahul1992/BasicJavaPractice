@@ -1,1 +1,1 @@
-# EATestAutomation
+# Java Programming Practice
