@@ -1,6 +1,7 @@
 package collectionPractice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 
 
@@ -72,6 +73,17 @@ public class ArrayListPractice {
 			for (Integer i : al2) {
 				System.out.println("Type Safe value with integer: "+i);
 			}
+			
+			//Conversion Process
+			System.out.println("--------------Conversion Process------");
+			String[] arrS = {"aaa", "bbb", "ccc"};
+			ArrayList<String> a = new ArrayList<String>(Arrays.asList(arrS));
+			for (String a1 : a) 
+			{
+			System.out.println(a1);	
+			}
+			
+			
 	}
 
 }
